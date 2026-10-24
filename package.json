@@ -1,0 +1,47 @@
+{
+  "name": "pi-queue",
+  "version": "0.1.0",
+  "description": "Durable SQLite-backed worker queues for Pi subagent tasks.",
+  "type": "module",
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "queue",
+    "sqlite"
+  ],
+  "files": [
+    "src/**/*.ts",
+    "!src/**/*.test.ts",
+    "!src/exp.ts"
+  ],
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "pi": {
+    "extensions": [
+      "./node_modules/@gotgenes/pi-subagents/src/index.ts",
+      "./src/index.ts"
+    ]
+  },
+  "scripts": {
+    "test": "tsx --test src/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-ai": "*",
+    "@earendil-works/pi-coding-agent": "*",
+    "typebox": "*"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-ai": "^1.1.0",
+    "@earendil-works/pi-coding-agent": "^1.1.0",
+    "@types/node": "^26.6.5",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "typebox": "^1.4.3"
+  },
+  "dependencies": {
+    "@gotgenes/pi-subagents": "^23.4.0",
+    "p-queue": "^10.0.0"
+  }
+}
