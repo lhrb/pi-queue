@@ -10,14 +10,16 @@ Requires Node.js 22.19.0 or newer and Pi.
 npm install
 npm test
 npm run typecheck
+pi install npm:@gotgenes/pi-subagents
 pi
 ```
 
-`.pi/settings.json` loads this package from the project directory after project trust approval. The package manifest loads both the subagents extension and the queue extension. Codemode is enabled for batch insertion through `queue_add`.
+`.pi/settings.json` loads this package from the project directory after project trust approval. The package manifest loads only the queue extension. Install `@gotgenes/pi-subagents` separately, once, to avoid duplicate tool registrations. Codemode is enabled for batch insertion through `queue_add`.
 
 To install from another directory:
 
 ```sh
+pi install npm:@gotgenes/pi-subagents
 pi install /absolute/path/to/pi-queue
 ```
 

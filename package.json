@@ -19,7 +19,6 @@
   },
   "pi": {
     "extensions": [
-      "./node_modules/@gotgenes/pi-subagents/src/index.ts",
       "./src/index.ts"
     ]
   },
